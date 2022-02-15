@@ -34,7 +34,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local L_4_ = L_3_.CreateLib("Xploit lol", "DarkTheme")
+local L_4_ = L_3_.CreateLib("ray Ware", "DarkTheme")
 
 local L_7_ = L_4_:NewTab("Silent Aim")
 local L_8_ = L_7_:NewSection("Ray Ware")
@@ -74,13 +74,13 @@ end
 )
 L_8_:NewToggle(
     "Silent Aim Show Fov",
-    "yea",
+    "https://discord.io/RayWare",
     function(L_75_arg0)
 	Aiming.ShowFOV = L_75_arg0
 end
 )
 local L_13_ = L_4_:NewTab("Misc Scripts")
-local L_14_ = L_13_:NewSection("Misc Scripts")
+local L_14_ = L_13_:NewSection("https://discord.io/RayWare")
 L_14_:NewKeybind(
     "Keybind Gui Toggle",
     "h",
@@ -289,7 +289,7 @@ L_14_:NewButton(
 end
 )
 local L_15_ = L_4_:NewTab("Teleports")
-local L_16_ = L_15_:NewSection("Teleports")
+local L_16_ = L_15_:NewSection("https://discord.io/RayWare")
 L_16_:NewButton(
     "Admin Base",
     "spawns you at admin base",
@@ -359,7 +359,7 @@ end
 )
 local L_17_ = L_4_:NewTab("ESP")
 local L_18_ = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
-local L_19_ = L_17_:NewSection("https://discord.gg/Y6Z46nBwhA")
+local L_19_ = L_17_:NewSection("https://discord.io/RayWare")
 L_19_:NewToggle(
     "ESP",
     "ESP",
@@ -389,7 +389,7 @@ L_19_:NewToggle(
 end
 )
 local L_20_ = L_4_:NewTab("Animation Changer")
-local L_21_ = L_20_:NewSection("Discord Coming Soon?!")
+local L_21_ = L_20_:NewSection("https://discord.io/RayWare")
 L_21_:NewButton(
     "Zombie And OldSchool",
     "you are cool",
