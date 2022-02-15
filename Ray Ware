@@ -34,7 +34,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local L_4_ = L_3_.CreateLib("ray Ware", "DarkTheme")
+local L_4_ = L_3_.CreateLib("Ray Ware", "DarkTheme")
 
 local L_7_ = L_4_:NewTab("Silent Aim")
 local L_8_ = L_7_:NewSection("Ray Ware")
