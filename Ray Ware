@@ -54,7 +54,7 @@ end
 )
 L_8_:NewDropdown(
     "Silent Aim Part",
-    "20 is more legit",
+    "you dont need to choose one",
     {
 	"Head",
 	"UpperTorso",
