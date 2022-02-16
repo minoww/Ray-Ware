@@ -288,6 +288,20 @@ L_14_:NewButton(
 	end
 end
 )
+L_14_:NewButton(
+    "Headless",
+    "Perm",
+    function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless", true))()
+end
+)
+L_14_:NewButton(
+    "Korblox",
+    "Perm",
+    function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg", true))()
+end
+)
 local L_15_ = L_4_:NewTab("Teleports")
 local L_16_ = L_15_:NewSection("https://discord.io/RayWare")
 L_16_:NewButton(
