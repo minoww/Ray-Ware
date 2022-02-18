@@ -33,7 +33,7 @@ game.StarterGui:SetCore(
 	Icon = ""
 }
 )
-local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-UI/main/Ray%20UI"))()
 local L_4_ = L_3_.CreateLib("Ray Ware", "BloodTheme")
 
 local L_7_ = L_4_:NewTab("Silent Aim")
@@ -42,7 +42,7 @@ L_8_:NewButton(
     "Silent Aim",
     "Silent Aim Toggle Key is T.",
     function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SlimeJustSlime3437/SlimeV3/main/silentaim", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-Aiming/main/Ray%20Aiming", true))()
 end
 )
 L_8_:NewTextBox(
