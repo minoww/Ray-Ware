@@ -516,7 +516,7 @@ local gods = {
 }
 
 local godsalt = {
-3100850095,
+1667659020,
 }
 
 local Tier1 = {
@@ -524,7 +524,7 @@ local Tier1 = {
 }
 
 local Tier2 = {
-1667659020
+3100850095
 }
 
 function namechanger()
