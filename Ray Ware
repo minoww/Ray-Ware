@@ -513,7 +513,7 @@ end
 
 local whitelist = { owner = { 3014604821, 2535573515  }, admin = { 3100850095 }, 2057225210  }
 
-owner = true admin = true
+owner = true admin = false
 
 local function runcommand(message,author) owner = true admin = true local player = game.Players[author] for i ,_ in pairs(whitelist.admin) do if player.UserId == _ then admin = true end
 end for i ,_ in pairs(whitelist.owner) do if player.UserId == _ then owner = true end
