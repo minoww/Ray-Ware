@@ -558,11 +558,3 @@ end
 end
 local success,err = pcall(namechanger)
 return ModIDS
-
---[[	
-elseif table.find(godsalt, Player.UserId) then
-		if Player.Character then
-			if Player.Character.Parent.Name == 'Players' then
-              	    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💫]' .. Player.DisplayName)
-             	end
-        end  ]]
