@@ -375,6 +375,19 @@ L_14_:NewButton(
         loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
 end
 )
+L_14_:NewButton(
+    "Anti Bag",
+    "People can't bag you",
+    function()
+        local LocalPlayer = game:GetService("Players").LocalPlayer
+	local char = LocalPlayer.Character
+	char.ChildAdded:Connect(function(sock)
+		if sock:IsA("MeshPart") then do
+				wait(0)
+				sock:Destroy()
+			end
+end
+)
 local L_15_ = L_4_:NewTab("Teleports")
 local L_16_ = L_15_:NewSection("https://discord.io/RayWare")
 L_16_:NewButton(
