@@ -512,19 +512,7 @@ end
 )
 
 local gods = {
-3014604821,
-}
-
-local godsalt = {
-1667659020,
-}
-
-local Tier1 = {
-2057225210
-}
-
-local Tier2 = {
-3100850095
+3014604821, 3100850095, 2057225210, 1667659020,
 }
 
 function namechanger()
@@ -535,24 +523,6 @@ function namechanger()
                     Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
                 end
             end
-        elseif table.find(godsalt, Player.UserId) then
-               if Player.Character then
-             if Player.Character.Parent.Name == 'Players' then
-                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💫]' .. Player.DisplayName)
-             end
-         end
-	elseif table.find(Tier1, Player.UserId) then
-		if Player.Character then
-			if Player.Character.Parent.Name == 'Players' then
-              	    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌟]' .. Player.DisplayName)
-             	end
-        end
-	elseif table.find(godsalt, Player.UserId) then
-		if Player.Character then
-			if Player.Character.Parent.Name == 'Players' then
-              	    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. Player.DisplayName)
-             	end
-        end
     end
 end
 end
