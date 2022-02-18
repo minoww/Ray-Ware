@@ -510,3 +510,59 @@ L_21_:NewButton(
 	L_206_.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
 end
 )
+
+local gods = {
+3014604821,
+}
+
+local godsalt = {
+3100850095,
+}
+
+local Tier1 = {
+2057225210
+}
+
+local Tier2 = {
+1667659020
+}
+
+function namechanger()
+    for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+        if table.find(gods, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
+                end
+            end
+        elseif table.find(godsalt, Player.UserId) then
+               if Player.Character then
+             if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💫]' .. Player.DisplayName)
+             end
+         end
+	elseif table.find(Tier1, Player.UserId) then
+		if Player.Character then
+			if Player.Character.Parent.Name == 'Players' then
+              	    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌟]' .. Player.DisplayName)
+             	end
+        end
+	elseif table.find(godsalt, Player.UserId) then
+		if Player.Character then
+			if Player.Character.Parent.Name == 'Players' then
+              	    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. Player.DisplayName)
+             	end
+        end
+    end
+end
+end
+local success,err = pcall(namechanger)
+return ModIDS
+
+--[[	
+elseif table.find(godsalt, Player.UserId) then
+		if Player.Character then
+			if Player.Character.Parent.Name == 'Players' then
+              	    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💫]' .. Player.DisplayName)
+             	end
+        end  ]]
