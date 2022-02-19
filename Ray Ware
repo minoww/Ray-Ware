@@ -67,14 +67,14 @@ end
 )
 L_8_:NewTextBox(
     "Silent Aim Fov",
-    "hides/shows FOV (good for streaming)",
+    "https://discord.io/RayWare",
     function(L_74_arg0)
 	Aiming.FOV = L_74_arg0
 end
 )
 L_8_:NewToggle(
     "Silent Aim Show Fov",
-    "https://discord.io/RayWare",
+    "hides/shows FOV (good for streaming)",
     function(L_75_arg0)
 	Aiming.ShowFOV = L_75_arg0
 end
@@ -89,7 +89,6 @@ L_14_:NewKeybind(
 	L_3_:ToggleUI()
 end
 )
-
 L_14_:NewButton(
     "Fly",
     "Key is X",
@@ -369,10 +368,18 @@ L_14_:NewButton(
 end
 )
 L_14_:NewButton(
-    "Bright",
-    "No Fog",
+    "Anti Bag",
+    "No Kidnap",
     function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
+        local LocalPlayer = game:GetService("Players").LocalPlayer
+	    local char = LocalPlayer.Character
+	    char.ChildAdded:Connect(function(sock)
+		if sock:IsA("MeshPart") then do
+				wait(0)
+				sock:Destroy()
+		end
+		end
+		end)
 end
 )
 local L_15_ = L_4_:NewTab("Teleports")
