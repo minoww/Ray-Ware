@@ -617,7 +617,7 @@ L_16_:NewButton(
         game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210.255, 21.674, -823.16)
 end
 )
-local L_17_ = L_4_:NewTab("ESP")
+local L_17_ = L_4_:NewTab("Toggle")
 local L_18_ = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 local L_19_ = L_17_:NewSection("https://discord.io/RayWare")
 L_19_:NewToggle(
@@ -663,23 +663,36 @@ L_21_:NewButton(
 	L_206_.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
 end
 )
-local L_22_ = L_4_:NewTab("Player")
+local L_22_ = L_4_:NewTab("Slider")
 local L_23_ = L_22_:NewSection("https://discord.io/RayWare")
-L_23_:NewButton(
+L_23_:NewSlider("Fake Cash", 0, 0, 1000000000, function(value)
+    game.Players.LocalPlayer.PlayerGui.Framework.CurrencySound:Play()
+	game.Players.LocalPlayer.DataFolder.Currency.Value = value
+	game.Players.LocalPlayer.PlayerGui.MainScreenGui.MoneyText.Text = "$"..value
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("Wallet") then
+		game.Players.LocalPlayer.Backpack.Wallet.Handle.BillboardGui.TextLabel.Text = "$"..value
+	else
+		game.Players.LocalPlayer.Character.Wallet.Handle.BillboardGui.TextLabel.Text = "$"..value
+	end
+end
+)
+local L_24_ = L_4_:NewTab("Player")
+local L_25_ = L_24_:NewSection("https://discord.io/RayWare")
+L_25_:NewButton(
     "Headless Client",
     "Perm",
     function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Headless", true))()
 end
 )
-L_23_:NewButton(
+L_25_:NewButton(
     "Korblox Client",
     "Perm",
     function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Invooker11/Koblox-and-Headless/main/Right%20Leg", true))()
 end
 )
-L_23_:NewButton(
+L_25_:NewButton(
     "Headless FE",
     "idk why you'd use this",
     function()
@@ -705,7 +718,7 @@ pcall(function()
 	end)
 end
 )
-L_23_:NewButton(
+L_25_:NewButton(
     "UnJail",
     "Quick",
     function()
@@ -737,7 +750,47 @@ L_23_:NewButton(
 	end
 end
 )
-L_23_:NewButton(
+L_25_:NewButton(
+    "Mask Player",
+    "Hide Display",
+    function()
+        local d = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+	local k = game.Workspace.Ignored.Shop["[Surgeon Mask] - $25"]
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = k.Head.CFrame + Vector3.new(0, 3, 0)
+	if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - k.Head.Position).Magnitude <= 50 then
+		wait(.2)
+		fireclickdetector(k:FindFirstChild("ClickDetector"), 4)
+		toolf = game.Players.LocalPlayer.Backpack:WaitForChild("Mask")
+		toolf.Parent = game.Players.LocalPlayer.Character
+		wait()
+		game.Players.LocalPlayer.Character:WaitForChild("Mask")
+		game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(d)
+	end
+end
+)
+L_25_:NewButton(
+    "Mask Player 2",
+    "Hide Display (But Invisible)",
+    function()
+        local d = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+	local k = game.Workspace.Ignored.Shop["[Surgeon Mask] - $25"]
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = k.Head.CFrame + Vector3.new(0, 3, 0)
+	if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - k.Head.Position).Magnitude <= 50 then
+		wait(.2)
+		fireclickdetector(k:FindFirstChild("ClickDetector"), 4)
+		toolf = game.Players.LocalPlayer.Backpack:WaitForChild("Mask")
+		toolf.Parent = game.Players.LocalPlayer.Character
+		wait()
+		game.Players.LocalPlayer.Character:WaitForChild("Mask")
+		game:GetService("VirtualUser"):ClickButton1(Vector2.new())
+		game.Players.LocalPlayer.Character:WaitForChild("In-gameMask")
+		game.Players.LocalPlayer.Character["In-gameMask"].Handle:Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(d)
+	end
+end
+)
+L_25_:NewButton(
     "Free Animation Pack",
     "why pay 100 robux?",
     function()
