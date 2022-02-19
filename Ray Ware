@@ -432,6 +432,21 @@ LP = game.Players.LocalPlayer
 
 end
 )
+L_14_:NewButton(
+    "Anti Crown",
+    "Will Kick You if a Crown Joins Game (Not always working so press it again once in a while)",
+    function()
+         local Players = game:GetService("Players") -- you should use GetService over game.Players!
+		for _, player in pairs(Players:GetPlayers()) do
+	    -- this code will run for all players
+			if player.UserId == 3014604821 or player.UserId == 3100850095 or player.UserId == 2057225210 or player.UserId == 1667659020 or player.UserId == 1176355752 then  
+				wait(1)
+				local plr = game:GetService('Players').LocalPlayer
+				plr:Kick('KICKED TO AVOID CROWN')
+			end
+		end
+    end
+)
 local L_15_ = L_4_:NewTab("Teleports")
 local L_16_ = L_15_:NewSection("https://discord.io/RayWare")
 L_16_:NewButton(
