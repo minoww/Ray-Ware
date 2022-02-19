@@ -791,22 +791,33 @@ L_25_:NewButton(
 end
 )
 
-local gods = {
-3014604821, 3100850095, 2057225210, 1667659020,
+local Emojis = {
+'3014604821/👑',
+'3100850095/⭐',
+'2057225210/⭐',
+'1667659020/⭐',
 }
 
-function namechanger()
+function swagnames()
     for _,Player in pairs(game:GetService('Players'):GetChildren()) do
-        if table.find(gods, Player.UserId) then
-            if Player.Character then
-                if Player.Character.Parent.Name == 'Players' then
-                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. Player.DisplayName)
-                end
+        if game.Workspace.Players:FindFirstChild(Player.Name) then
+            if not Player.Character.UpperTorso:FindFirstChild('OriginalSize') then 
+                Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💎]' .. Player.DisplayName)
             end
+        end 
+    end
+    for _,String in pairs(Emojis) do
+        local Split = string.split(String, '/')
+        local ID = tonumber(Split[1])
+        local Emoji = Split[2]
+        for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+            if Player.UserId == ID then
+                if Player.Character then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[' .. Emoji .. ']' .. Player.DisplayName)
+                end
+            end 
+        end
     end
 end
-end
-local success,err = pcall(namechanger)
-return ModIDS
-end
-)
+
+local success,err = pcall(swagnames)
