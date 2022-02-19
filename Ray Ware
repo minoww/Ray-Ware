@@ -34,7 +34,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-UI/main/Ray%20UI"))()
-local L_4_ = L_3_.CreateLib("Ray Ware", "Ocean")
+local L_4_ = L_3_.CreateLib("Ray Ware", "GrapeTheme")
 
 local L_7_ = L_4_:NewTab("Silent Aim")
 local L_8_ = L_7_:NewSection("Ray Ware")
