@@ -508,6 +508,13 @@ L_16_:NewButton(
         game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-434.60995483398, 38.971572875977, -284.18685913086)
 end
 )
+L_16_:NewButton(
+    "Mask",
+    "spawns you at mask",
+    function()
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-210.255, 21.674, -823.16)
+end
+)
 local L_17_ = L_4_:NewTab("ESP")
 local L_18_ = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))()
 local L_19_ = L_17_:NewSection("https://discord.io/RayWare")
