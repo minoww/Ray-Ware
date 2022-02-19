@@ -34,7 +34,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-UI/main/Ray%20UI"))()
-local L_4_ = L_3_.CreateLib("Ray Ware", "BloodTheme")
+local L_4_ = L_3_.CreateLib("Ray Ware", "Ocean")
 
 local L_7_ = L_4_:NewTab("Silent Aim")
 local L_8_ = L_7_:NewSection("Ray Ware")
@@ -42,7 +42,7 @@ L_8_:NewButton(
     "Silent Aim",
     "Silent Aim Toggle Key is T.",
     function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-Aiming/main/Ray%20Aiming", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SlimeJustSlime3437/SlimeV3/main/silentaim", true))()
 end
 )
 L_8_:NewTextBox(
@@ -373,19 +373,6 @@ L_14_:NewButton(
     "No Fog",
     function()
         loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
-end
-)
-L_14_:NewButton(
-    "Anti Bag",
-    "People can't bag you",
-    function()
-        local LocalPlayer = game:GetService("Players").LocalPlayer
-	local char = LocalPlayer.Character
-	char.ChildAdded:Connect(function(sock)
-		if sock:IsA("MeshPart") then do
-				wait(0)
-				sock:Destroy()
-			end
 end
 )
 local L_15_ = L_4_:NewTab("Teleports")
