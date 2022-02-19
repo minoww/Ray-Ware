@@ -34,7 +34,7 @@ game.StarterGui:SetCore(
 }
 )
 local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-UI/main/Ray%20UI"))()
-local L_4_ = L_3_.CreateLib("Ray Ware", "GrapeTheme")
+local L_4_ = L_3_.CreateLib("Ray Ware", "BloodTheme")
 
 local L_7_ = L_4_:NewTab("Silent Aim")
 local L_8_ = L_7_:NewSection("Ray Ware")
@@ -368,6 +368,70 @@ L_14_:NewButton(
 		end)
 end
 )
+L_14_:NewButton(
+    "Fist Reach",
+    "Bigger Melee Reach",
+    function()
+LP = game.Players.LocalPlayer 
+
+	for i,v in ipairs(LP.Character:GetDescendants()) do 
+
+		if v:IsA("MeshPart") then v.Massless = true 
+
+			v.CanCollide = false 
+
+			v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0) 
+
+
+		end 
+
+	end 
+
+
+	for i,v in ipairs(game.workspace:GetDescendants()) do 
+
+		if v:IsA("Seat") then 
+
+			v.Disabled = true 
+
+		end 
+
+	end 
+
+	x = 45
+
+	y = 45 
+
+	z = 45
+
+
+
+	penis = Vector3.new(x,y,z) 
+
+
+	LP.Character.RightHand.Size = penis 
+
+
+	local selectionBox = Instance.new("SelectionBox",LP.Character.RightHand) 
+
+	selectionBox.Adornee = LP.Character.RightHand 
+	selectionBox = Enum.Material.Neon
+	selectionBox.Color3 = Color3.new(1, 1, 1)  
+
+	LP.Character.LeftHand.Size = penis 
+
+	LP.Character.BodyEffects.SpecialParts.LeftHand.Size = penis 
+
+
+
+	local selectionBox = Instance.new("SelectionBox",LP.Character.LeftHand) 
+
+	selectionBox.Adornee = LP.Character.LeftHand 
+	selectionBox = Enum.Material.Neon
+	selectionBox.Color3 = Color3.new(1, 1, 1) 
+
+end
+)
 local L_15_ = L_4_:NewTab("Teleports")
 local L_16_ = L_15_:NewSection("https://discord.io/RayWare")
 L_16_:NewButton(
@@ -530,7 +594,6 @@ pcall(function()
 			wait()
 		end
 	end)
-end)
 end
 )
 
