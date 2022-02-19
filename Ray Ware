@@ -42,7 +42,7 @@ L_8_:NewButton(
     "Silent Aim",
     "Silent Aim Toggle Key is T.",
     function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/SlimeJustSlime3437/SlimeV3/main/silentaim", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/minoww/Ray-Aiming/main/Ray%20Aiming", true))()
 end
 )
 L_8_:NewTextBox(
